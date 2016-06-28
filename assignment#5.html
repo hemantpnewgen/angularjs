@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment#5</title>
+	<script type="text/javascript" src=https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		var avenger=angular.module("MyApp",[]);//module
+		avenger.controller("iron",function($scope){//controller 1
+			$scope.name="Ironman";
+			$scope.employee_id=1980;
+			$scope.designation="Superhero";
+		});
+		avenger.controller("spidey",function($scope){//controller 2
+			$scope.name="Spiderman";
+			$scope.employee_id=1999;
+			$scope.designation="Intern";
+		});
+		avenger.controller("cap",function($scope){//controller 3
+			$scope.name="Captain America";
+			$scope.employee_id=1932;
+			$scope.designation="Captain";
+		});
+	</script>
+
+</head>
+<body ng-app="MyApp" class="container">
+<div class="container" ng-controller="iron">	
+	<h3>Employee #1</h3>
+	<p>Name: {{name}}</p>
+	<p>Employee Id: {{employee_id}}</p>
+	<p>Designation: {{designation}}</p>	<!--display scope properties-->
+</div>
+<div class="container" ng-controller="spidey">	
+	<h3>Employee #2</h3>
+	<p>Name: {{name}}</p>
+	<p>Employee Id: {{employee_id}}</p>
+	<p>Designation: {{designation}}</p>	<!--display scope properties-->
+</div>
+<div class="container" ng-controller="cap">	
+	<h3>Employee #3</h3>
+	<p>Name: {{name}}</p>
+	<p>Employee Id: {{employee_id}}</p>
+	<p>Designation: {{designation}}</p>	<!--display scope properties-->
+</div>
+</body>
+</html>
